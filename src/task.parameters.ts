@@ -13,7 +13,7 @@ export class TaskParameters {
         this._azureDevopsToken = core.getInput('azure-devops-token', { required: true });
         this._azurePipelineVariables = core.getInput('azure-pipeline-variables', { required: false });
     }
-
+//VL:TO GET THE PARAMETERS OF THE TASK
     public static getTaskParams() {
         if (!this.taskparams) {
             this.taskparams = new TaskParameters();
@@ -33,7 +33,7 @@ export class TaskParameters {
     public get azureDevopsToken() {
         return this._azureDevopsToken;
     }
-
+//VL: FETCH PIPELINE VARIBALES
     public get azurePipelineVariables() {
         return this._azurePipelineVariables;
     }
